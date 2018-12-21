@@ -1,0 +1,7 @@
+{
+  "name": "crudFirebase",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
