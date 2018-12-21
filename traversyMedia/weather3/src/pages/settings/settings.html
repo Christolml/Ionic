@@ -1,0 +1,54 @@
+<ion-header>
+
+  <ion-navbar no-border-bottom>
+    <ion-title>Weather Settings</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="appType">
+      <ion-segment-button value="Coordinates">
+        Coordinates
+      </ion-segment-button>
+      <ion-segment-button value="City">
+        City
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+    <ion-list-header>{{appType}}</ion-list-header>
+    <form (ngSubmit)="saveForm()">
+      <ion-item *ngFor="let data of getLocations(appType)">
+        <ion-label>{{data.name}}</ion-label>
+        <ion-input [(ngModel)]="data.obj" name="{{data.name}}" type="text"></ion-input>
+      </ion-item>
+      <button ion-button type="submit" block>Save Changes</button>
+    </form>
+  </ion-list>
+
+
+
+
+  <!-- se trato de hacer dinamico la creacion del label y del input de cada uno de los componentes, pero tuve un problema
+    con el ngModel del input el cual debe estar relacionado con una variable de mi settings.ts y tuve problemas de 
+    crear dinamicamente las variables aqui y que se estuvieran relacionando con mi .ts asi que opte por hacerlo no dinamico
+
+    <ion-list>
+    <ion-list-header>{{appType}}</ion-list-header>
+    <form (ngSubmit)="saveForm()">
+      <ion-item *ngFor="let location of getLocations(appType)">
+        <ion-label >{{location.name}}</ion-label>
+        <ion-item *ngFor="let name of getLocations(appType)">
+        <ion-input [(ngModel)]="name.name" name="name.name" type="text"></ion-input>
+      </ion-item>
+      </ion-item>
+      <button ion-button type="submit" block>Save Changes</button>
+    </form>
+  </ion-list> -->
+
+</ion-content>
