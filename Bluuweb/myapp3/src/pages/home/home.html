@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar color="secondary">
+
+    <ion-buttons start>
+      <button ion-button icon-only>
+        <ion-icon name="contact"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <ion-title text-center>Inicio</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3>Bienvenidos a mi app :3 </h3>
+  <p>
+    This starter project comes with simple tabs-based layout for apps that are going to primarily use a Tabbed UI.
+  </p>
+  <p>
+    Take a look at the
+    <code>src/pages/</code> directory to add or change tabs, update any existing page or create new pages.
+  </p>
+  <button ion-button block color="dark" (click)="alertaBasica()" >Alerta basica Aqui</button>
+  <button ion-button block color="dark" (click)="alertaBasica2()" >Alerta con inputs</button>
+  <button ion-button color="light" clear>Light</button>
+  <button ion-button color="secondary" round>Secondary</button>
+  <!-- boton de ejemplo de ir a otra pagina -->
+  <!-- <button ion-button (click)="otraPagina()" color="danger">Ir a otra pagina</button> -->
+  <button ion-button color="danger">Ir a otra pagina</button>
+
+  <button ion-button color="dark" small>Dark</button>
+
+  <!-- Float the icon left -->
+  <button ion-button icon-start>
+    <ion-icon name="home"></ion-icon>
+    Left Icon
+  </button>
+
+  <!-- Float the icon right -->
+  <button ion-button icon-end>
+    Right Icon
+    <ion-icon name="home"></ion-icon>
+  </button>
+
+  <!-- Only icon (no text) -->
+  <button ion-button icon-only>
+    <ion-icon name="logo-android"></ion-icon>
+  </button>
+
+</ion-content>

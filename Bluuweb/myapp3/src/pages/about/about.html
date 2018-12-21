@@ -1,0 +1,70 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Nosotros
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h2>Hola soy la pag de nosotros prrro</h2>
+  <button ion-button>Button</button>
+
+<!-- lista dinamica -->
+<ion-card>
+  <ion-card-header>
+    Lista dinamica
+  </ion-card-header>
+
+  <ion-list>
+    <button ion-item *ngFor="let item of lista">
+      <ion-icon name="cart" item-start [ngStyle]="{'color': item.color}"></ion-icon>
+      {{item.titulo}}
+    </button>
+  </ion-list>
+
+</ion-card>
+
+
+<!-- lista dinamica -->
+
+
+<!-- List in cards -->
+  <ion-card>
+      <ion-card-header>
+        Mi primera lista lml
+      </ion-card-header>
+  
+      <ion-list>
+        <button ion-item>
+          <ion-icon name="cart" item-start></ion-icon>
+          Shopping
+        </button>
+  
+        <button ion-item>
+          <ion-icon name="medical" item-start></ion-icon>
+          Hospital
+        </button>
+  
+        <button ion-item>
+          <ion-icon name="cafe" item-start></ion-icon>
+          Cafe
+        </button>
+  
+        <button ion-item>
+          <ion-icon name="paw" item-end></ion-icon>
+          Dog Park
+        </button>
+  
+        <button ion-item>
+          <ion-icon name="beer" item-end></ion-icon>
+          Pub
+        </button>
+  
+  
+      </ion-list>
+    </ion-card>
+<!-- List in cards -->
+
+
+</ion-content>
