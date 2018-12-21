@@ -1,0 +1,48 @@
+
+<ion-header>
+
+  <ion-navbar no-border-bottom>
+    <ion-title>Weather Settings</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="appType">
+      <ion-segment-button value="coordinates">
+        Coordinates
+      </ion-segment-button>
+      <ion-segment-button value="city">
+        City
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <h1>Holi</h1>
+    <ion-row>
+      <ion-col width-100>
+        <ion-list>
+          <form (ngSubmit)="saveForm()" >
+            <ion-item *ngFor="let location of getLocation(appType)" >
+              <ion-label fixed>
+                Latitude
+              </ion-label>
+              <ion-input [(ngModel)]="latitude" name="latitude" type="text" ></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label fixed>
+                  Longitude
+                </ion-label>
+                <ion-input [(ngModel)]="longitude" name="longitude" type="text" ></ion-input>
+            </ion-item>
+            <button ion-button type="submit" block>Save Changes</button>
+          </form>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>
